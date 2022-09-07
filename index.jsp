@@ -6,5 +6,5 @@
 <html>
 <body>
     message = <%=h.hello() %>
-</body>	
+</body>
 </html>
