@@ -2,7 +2,7 @@
 
 <%-- CLASS는 스타일 적용시에 사용 되는 이름, 중첩 가능 --%>
 
-<%! String greeting = "꾸팡에 오신 것을 환영합니다~";
+<%! String greeting = "welcome to SEUNG-HEE website";
 String tagline = "하단 페이지 : 확인"; %>
 
 <div class="jumbotron">
@@ -22,7 +22,7 @@ String tagline = "하단 페이지 : 확인"; %>
 </div>
 
 <div class="list-group">
-    <a href="#" class="list-group-item list-group-action active" aria-currrent="true">하이</a>
+    <a href="#" class="list-group-item list-group-action active" aria-currrent="true">BEST</a>
     <a href="#" class="list-group-item list-group-action" aria-currrent="true">하이</a>
     <a href="#" class="list-group-item list-group-action" aria-currrent="true">하이</a>
     <a href="#" class="list-group-item list-group-action" aria-currrent="true">하이</a>
