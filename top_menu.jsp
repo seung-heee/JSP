@@ -8,15 +8,17 @@
             카테고리
         </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <a class="dropdown-item" href="#">아우터</a>
-            <a class="dropdown-item" href="#">상의</a>
-            <a class="dropdown-item" href="#">바지</a>
-            <a class="dropdown-item" href="#">치마</a>
-            <a class="dropdown-item" href="#">원피스</a>
+            <a class="dropdown-item" href="#">국내도서</a>
+            <a class="dropdown-item" href="#">국외도서</a>
+            <a class="dropdown-item" href="#">eBOOK</a>
+            <a class="dropdown-item" href="#">웹소설</a>
+            <a class="dropdown-item" href="#">ONLY 교보문고</a>
         </div>
     </div>
+    
     <!-- 로고 -->
-    <div><img src="image/logo2.png" class="img/fluid" alt="main_image"></div>
+    <div><img src="image/logo_kyobo.png" class="img/fluid" alt="main_image"></div>
+    
     <!-- navbar 메뉴 -->
     <div class="container">
         <div class="navbar-header">
