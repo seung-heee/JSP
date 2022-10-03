@@ -3,15 +3,15 @@
 <%@ page import = "dto.Product" %>
 <jsp:useBean id = "productDAO" class="dao.ProductRepository" scope="session" />
 
-<%! String greeting = "welcome to SEUNG-HEE website";
+<%! String greeting = "교보문고에 오신 것을 환영합니다";
 String tagline = "하단 페이지 : 확인"; %>
 
 <div class="container">
     <div class="jumbotron">
         <div class="container">
-            <h1 class="display-3">
+            <h4 class="display-4">
                 <%= greeting %>
-            </h1>
+            </h4>
         </div>
     </div>
 
@@ -25,10 +25,20 @@ String tagline = "하단 페이지 : 확인"; %>
                 for(int i=0; i<listOfProducts.size(); i++) {
                     Product product = listOfProducts.get(i);  
             %>
-            <div class="col-md-4">
-                <h3><%=product.getPname()%></h3>
-                <p><%=product.getDescription()%></p>
-                <p><%=product.getUnitPrice()%></p>
+            <div class="col-md-4" style="margin-bottom:10px;">
+                <div class="card bg-dark text-white">
+                    <img src="image/product/<%=product.getProductId()%>.jpg" class="card-img" alt="..." style="width:338;height:448;">
+                    <div class="card-img-overlay">
+                        <h5 class="card-title">Best Seller</h5>
+                        <p class="card-text">출처 : 교보문고</p>
+                    </div>
+                </div>
+                <h4 style="margin-top:15px; margin-bottom:5px"><b><%=product.getPname()%></b></h4>
+                <p style="margin-bottom:5px;"><%=product.getDescription()%></p>
+                <p><%=product.getUnitPrice()%>원</p>
+                <p>
+                    <a href="product_detail.jsp?id=<%=product.getProductId()%>" class="btn btn-secondary" role="button">상품 상세 정보 &raquo;</a>
+                </p>
             </div>
             <%
             }
