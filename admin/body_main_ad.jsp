@@ -1,7 +1,7 @@
 <%@ page contentType = "text/html;charset=utf-8" %>
 <%@ page import = "java.util.ArrayList" %>
 <%@ page import = "dto.Product" %>
-<jsp:useBean id = "productDAO" class="dao.ProductRepository" scope="session" />
+<%@ page import="dao.ProductRepository"%>
 
 <%! String greeting = "교보문고에 오신 것을 환영합니다";
 String tagline = "하단 페이지 : 확인"; %>
@@ -16,7 +16,8 @@ String tagline = "하단 페이지 : 확인"; %>
     </div>
 
     <%
-    ArrayList<Product> listOfProducts = productDAO.getAllProducts();
+        ProductRepository dao = ProductRepository.getInstance();
+		ArrayList<Product> listOfProducts = dao.getAllProducts();
     %>
 
     <div class="container">
@@ -27,7 +28,7 @@ String tagline = "하단 페이지 : 확인"; %>
             %>
             <div class="col-md-4" style="margin-bottom:10px;">
                 <div class="card bg-dark text-white">
-                    <img src="image/product/<%=product.getProductId()%>.jpg" class="card-img" alt="..." style="width:338;height:448;">
+                    <img src="../image/product/<%=product.getProductId()%>.jpg" class="card-img" alt="..." style="width:338;height:448;">
                     <div class="card-img-overlay">
                         <h5 class="card-title">Best Seller</h5>
                         <p class="card-text">출처 : 교보문고</p>
@@ -37,7 +38,7 @@ String tagline = "하단 페이지 : 확인"; %>
                 <p style="margin-bottom:5px;"><%=product.getDescription()%></p>
                 <p><%=product.getUnitPrice()%>원</p>
                 <p>
-                    <a href="product_detail.jsp?id=<%=product.getProductId()%>" class="btn btn-secondary" role="button">상품 상세 정보 &raquo;</a>
+                    <a href="product_detail_ad.jsp?id=<%=product.getProductId()%>" class="btn btn-secondary" role="button">상품 상세 정보 &raquo;</a>
                 </p>
             </div>
             <%

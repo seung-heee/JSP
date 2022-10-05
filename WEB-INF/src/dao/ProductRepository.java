@@ -5,6 +5,11 @@ import dto.Product;
 
 public class ProductRepository {
 	private ArrayList<Product> listOfProducts = new ArrayList<Product>();
+    private static ProductRepository instance = new ProductRepository();
+    
+    public static ProductRepository getInstance(){
+		return instance;
+   	}
 
 	public ProductRepository() {
         Product book1 = new Product("9791130692258", "하쿠다 사진관", 15500);
@@ -98,4 +103,7 @@ public class ProductRepository {
         }
         return productById;
     }
+    public void addProduct(Product product) {
+		listOfProducts.add(product);
+   	}
 }
