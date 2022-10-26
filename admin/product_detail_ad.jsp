@@ -30,7 +30,7 @@
                 ProductRepository dao = ProductRepository.getInstance();
                 Product product = dao.getProductById(id);
             %>
-
+            
             <div class="container">
                 <div class="row">
                     <div class="col-me-6">
