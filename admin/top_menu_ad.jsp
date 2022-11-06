@@ -22,10 +22,10 @@
     <!-- navbar 메뉴 -->
     <div class="container" style="display:inline-block; text-align:right;">
         <div class="navbar-header">
-            <a style="color:black;" class="navbar-brand" href="../index.jsp">메뉴바 : 홈페이지</a>
-            <a style="color:black;" class="navbar-brand" href="../index.jsp">회원보기/추가/수정/삭제</a>
-            <a style="color:black;" class="navbar-brand" href="index_ad.jsp">상품 보기</a>
-            <a style="color:black;" class="navbar-brand" href="../login/login.jsp">등록</a>
+            <a style="color:black;" class="navbar-brand" href="index_ad.jsp">메뉴바 : 홈페이지</a>
+            <a style="color:black;" class="navbar-brand" href="./index_ad.jsp">회원보기/추가/수정/삭제</a>
+            <a style="color:black;" class="navbar-brand" href="./index_ad.jsp">상품 보기</a>
+            <a style="color:black;" class="navbar-brand" href="product_add_ad.jsp">등록</a>
             <a style="color:black;" class="navbar-brand" href="index_ad.jsp">수정/삭제</a>
             <a style="color:black;" class="navbar-brand" href="../index.jsp">일반모드</a>
         </div>
