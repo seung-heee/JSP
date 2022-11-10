@@ -29,7 +29,7 @@
             <table width="100%">
                 <tr>
                     <td align="left"><a href="product_cart_remove_all.jsp?cartId=<%=cartId%>" class="btn btn-danger">삭제하기</a></td>
-                    <td align="right"><a href="#" class="btn btn-success">주문하기</a></td>
+                    <td align="right"><a href="../order/order_info.jsp?cartId=<%= cartId %>" class="btn btn-success">주문하기</a></td>
                 </tr>
             </table>
         </div>
@@ -42,7 +42,7 @@
                     <th>소계</th>
                     <th>비고</th>
                 </tr>
-                <%				
+                <%
                     int sum = 0;
                     ArrayList<Product> cartList = (ArrayList<Product>) session.getAttribute("cartlist");
                     if (cartList == null)
