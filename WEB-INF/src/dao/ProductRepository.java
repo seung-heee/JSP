@@ -1,4 +1,4 @@
-//실제 상품 정보 저장
+// 실제상품정보 저장
 package dao;
 import java.util.ArrayList;
 import dto.Product;

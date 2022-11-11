@@ -1,4 +1,4 @@
-//상품목록, 상품정의
+// 상품목록정의
 package dto;
 import java.io.Serializable;
 
