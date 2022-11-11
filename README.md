@@ -28,6 +28,9 @@ error
 2.관리자모드- 등록- "이미지 에러(관리자, 일반모드 둘다)"
 -쇼핑몰 입력값 필터링 추가[js/validation.js]
 
+### 9주차 22/10/26
+-쇼핑몰 로그인 기능 추가[login.jsp, login_failed.jsp, logout.jsp]
+-탐켓 서버 내 .xml 파일 수정[WEB-INF/web.xml]
 
 
 22년 10월 11일 : 쇼핑몰 주문 처리 페이지 추가
