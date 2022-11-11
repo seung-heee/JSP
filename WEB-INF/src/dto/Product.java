@@ -1,4 +1,4 @@
-// 상품목록정의
+// 상품 목록을 모든 변수로 정의
 package dto;
 import java.io.Serializable;
 

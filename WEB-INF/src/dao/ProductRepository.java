@@ -1,4 +1,4 @@
-// 실제상품정보 저장
+// 실제 상품 정보를 저장
 package dao;
 import java.util.ArrayList;
 import dto.Product;
@@ -10,7 +10,8 @@ public class ProductRepository {
     public static ProductRepository getInstance(){
 		return instance;
    	}
-
+    
+    // 상품 클래스 구성과 일치하는 상품 정보(리스트)를 입력
 	public ProductRepository() {
         Product book1 = new Product("P1234", "하쿠다 사진관", 15500);
         book1.setDescription("지친 인생들의 마음 치유소");
@@ -96,20 +97,25 @@ public class ProductRepository {
         listOfProducts.add(book9);
     }
 
+        // 전체 상품 정보 리턴
   	public ArrayList<Product> getAllProducts() {
 		return listOfProducts;
     }
-    
+
+    // 링크클릭을 통해 요청된 상품 id를 리턴하는 메소드
     public Product getProductById(String productId) {
         Product productById = null;
         
+        // 리스트를 반복하면서
         for(int i=0; i<listOfProducts.size(); i++) {
             Product product = listOfProducts.get(i);
+            // 조건문으로 요청된 id와 같은 것을 찾아
             if(product != null && product.getProductId() != null && product.getProductId().equals(productId)) {
                 productById = product;
                 break;
             }
         }
+        // 리턴
         return productById;
     }
     

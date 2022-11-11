@@ -1,3 +1,4 @@
+<!-- Product_detail.jsp 에러페이지 -->
 <%@ page contentType = "text/html;charset=utf-8" %>
 <%@ page import="dto.Product"%>
 <%@ page import="java.util.Date"%>
@@ -24,6 +25,6 @@
                 </div>
             </div>
         </div>
-        <%@ include file="footer.jsp"%>
+        <%@ include file="../footer.jsp"%>
     </body>
 </html>
