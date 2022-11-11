@@ -5,6 +5,7 @@ import dto.Product;
 
 public class ProductRepository {
 	private ArrayList<Product> listOfProducts = new ArrayList<Product>();
+    // 데이터 추가를 위한 객체 변수 인스턴스를 사용, 클래스 변수와 다름.
     private static ProductRepository instance = new ProductRepository();
     
     public static ProductRepository getInstance(){

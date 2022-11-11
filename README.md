@@ -14,11 +14,17 @@
 [dto/Product.java, dao/ProductRepository.java]
 
 ### 5주차 22년 9월 28일
-쇼핑몰 상세 페이지 설정(Product_detail.jsp)
-[dao/ProductRepository.java > getProductById() 추가 (상품과 일치하는 id 리턴) ]
+쇼핑몰 상세 페이지 추가(Product_detail.jsp)
+[dao/ProductRepository.java > getProductById() 추가 (상품과 일치하는 id 리턴)]
+
+### 6주차 22년 10월 5일
+쇼핑몰 상품 등록 추가[product_add_ad.jsp/product_add_process.jsp]
+관리자 전용 폴더 생성
+
+
 
 
 22년 10월 11일 : 쇼핑몰 주문 처리 페이지 추가
-장바구니 주문 배송일자 => 오늘날짜 참고 페이지 : https://gilhyeon.tistory.com/51
+장바구니 주문 배송일자 => 오늘날짜 참고 페이지 :
 
 
