@@ -2,7 +2,7 @@
 <%@ page import = "java.util.ArrayList" %>
 <%@ page import = "dto.Product" %>
 <%@ page import="dao.ProductRepository"%>
-<!-- <jsp:useBean id = "productDAO" class="dao.ProductRepository" scope="session" /> -->
+<!--<jsp:useBean id = "productDAO" class="dao.ProductRepository" scope="session" />-->
 
 <%! String greeting = "교보문고에 오신 것을 환영합니다";
 String tagline = "하단 페이지 : 확인"; %>

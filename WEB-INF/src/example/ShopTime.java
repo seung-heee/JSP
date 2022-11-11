@@ -16,5 +16,5 @@ public class ShopTime {
         }
         String CT = hour + ":" + minute  + ":" + second + " " + am_pm;
         return CT;
-    }
+    }  
 }

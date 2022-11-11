@@ -1,6 +1,7 @@
 <%@ page contentType = "text/html;charset=utf-8" %>
-<%@page import="java.util.Date"%>
-<%@ page import="java.util.GregorianCalendar" %>
+<%@ page import="java.util.Date"%>
+<%@ page import="java.time.LocalDate" %>
+
 <html>
     <head>
         <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
@@ -33,10 +34,9 @@
                     <label class="col-sm-2">배송일</label>
                     <div class="col-sm-3">
                         <%
-                            GregorianCalendar now = new GregorianCalendar();
-                            String date = String.format("%TF", now);
+                            LocalDate OneDaysLater = LocalDate.now().plusDays(1);
                         %>
-                        <input type="date" class="form-control" name="shippingDate" min="<%=date %>"/>(yyyy/mm/dd)    
+                        <input type="date" class="form-control" name="shippingDate" min="<%= OneDaysLater %>"/> (yyyy/mm/dd)    
                     </div>
                 </div>
 
