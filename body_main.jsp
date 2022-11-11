@@ -29,7 +29,7 @@ String tagline = "하단 페이지 : 확인"; %>
             %>
             <div class="col-md-4" style="margin-bottom:10px;">
                 <div class="card bg-dark text-white">
-                    <img src="image/product/<%=product.getFilename()%>" class="card-img" alt="..." style="width:338;height:448;">
+                    <img src="image/product/<%=product.getFilename()%>" class="card-img" alt="이미지" style="width:338;height:448;">
                     <div class="card-img-overlay">
                         <h5 class="card-title">Best Seller</h5>
                         <p class="card-text">출처 : 교보문고</p>

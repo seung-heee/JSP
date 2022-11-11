@@ -1,3 +1,4 @@
+// 폼 입력값 필터링
 function CheckAddProduct() {
 
 	var productId = document.getElementById("productId");
