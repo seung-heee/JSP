@@ -1,3 +1,5 @@
+<!-- 폼에서 입력된 값을 request.getParameter를 이용해 받고, 인코딩 한 뒤 쿠키 생성 -->
+
 <%@ page contentType="text/html; charset=utf-8"%>
 <%@ page import="java.net.URLEncoder"%>
 <%
@@ -9,7 +11,8 @@
 	Cookie country = new Cookie("Shipping_country",	URLEncoder.encode(request.getParameter("country"), "utf-8"));
 	Cookie zipCode = new Cookie("Shipping_zipCode",	URLEncoder.encode(request.getParameter("zipCode"), "utf-8"));
 	Cookie addressName = new Cookie("Shipping_addressName", URLEncoder.encode(request.getParameter("addressName"), "utf-8"));
-
+    
+    // 유지 시간
 	cartId.setMaxAge(24 * 60 * 60); // 초 단위
 	name.setMaxAge(24 * 60 * 60);
 	zipCode.setMaxAge( 24 * 60 * 60);

@@ -1,3 +1,4 @@
+<!-- 주문이 완료되면 기존 세션과 쿠키 삭제 -->
 <%@ page contentType="text/html; charset=utf-8"%>
 <%@ page import="java.net.URLDecoder"%>
 <html>
@@ -17,7 +18,8 @@
             String shipping_country = "";
             String shipping_zipCode = "";
             String shipping_addressName = "";		
-
+            
+            // 쿠키 정보 배열로 얻음
             Cookie[] cookies = request.getCookies();
 
             if (cookies != null) {
@@ -31,6 +33,8 @@
                 }
             }
         %>
+        
+        <!-- 주문완료 화면 출력 -->
         <jsp:include page="../top_menu.jsp" />
         <div class="jumbotron">
            <div class="container">
@@ -50,8 +54,9 @@
 </html>
 
 <%
-	session.invalidate();
-
+	session.invalidate(); //세션 초기화
+    
+    // 쿠키 유효시간 초기화, 아예 삭제됨
 	for (int i = 0; i < cookies.length; i++) {
 		Cookie thisCookie = cookies[i];
 		String n = thisCookie.getName();

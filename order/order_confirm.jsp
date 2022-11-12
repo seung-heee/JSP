@@ -1,3 +1,4 @@
+<!-- 추가된 쿠키 정보를 배열로부터 읽음 -->
 <%@ page contentType="text/html; charset=utf-8"%>
 <%@ page import="java.util.ArrayList"%>
 <%@ page import="java.net.URLDecoder"%>

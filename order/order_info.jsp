@@ -1,3 +1,4 @@
+<!-- 배송 정보 입력 화면 구성 -->
 <%@ page contentType = "text/html;charset=utf-8" %>
 <%@ page import="java.util.Date"%>
 <%@ page import="java.time.LocalDate" %>
@@ -20,6 +21,7 @@
             </div>
         </div>
         <div class="container">
+            <!-- 배송정보 입력 form -->
             <form action="order_info_process.jsp" class="form-horizontal" method="post">
                 <input type="hidden" name="cartId" value="<%=request.getParameter("cartId")%>" />
                 
@@ -43,7 +45,7 @@
                 
                 <div class="form-group row">
                    <label class="col-sm-2">국가명</label>
-                    <div class="col-sm-3">
+                    <div class="col-sm-3"> 
                     <!-- <input name="country" type="text" class="form-control" /> -->
                     <select name="country">
                         <option value="한국">한국</option>
