@@ -30,7 +30,12 @@ error
 ### 9주차 22/10/26
 -쇼핑몰 로그인 기능 추가[login.jsp, login_failed.jsp, logout.jsp]
 -탐켓 서버 내 .xml 파일 수정[WEB-INF/web.xml]
+-도전문제 O
 
+### 10주차 22/11/02
+-세션 및 장바구니 기능 추가[product_cart.jsp, product_cart_add.jsp, product_cart_remove.jsp, product_cart_remove_all.jsp]
+-도전문제1 : 상단로그 이미지 O
+-도전문제2 : 세션 전체 삭제 - 뒤로가기 - 특정 상품 선택 삭제 X
 
 22년 10월 11일 : 쇼핑몰 주문 처리 페이지 추가
 장바구니 주문 배송일자 => 오늘날짜 참고 페이지 :
