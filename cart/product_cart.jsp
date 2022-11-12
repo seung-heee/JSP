@@ -29,6 +29,7 @@
             <table width="100%">
                 <tr>
                     <td align="left"><a href="product_cart_remove_all.jsp?cartId=<%=cartId%>" class="btn btn-danger">삭제하기</a></td>
+                    <%=cartId%>
                     <td align="right"><a href="../order/order_info.jsp?cartId=<%= cartId %>" class="btn btn-success">주문하기</a></td>
                 </tr>
             </table>
