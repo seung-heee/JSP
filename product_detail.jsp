@@ -57,22 +57,22 @@
                                 <a href="cart/product_cart.jsp" class="btn btn-warning"> 장바구니 &raquo;</a>
                         </form>
 
-
-                    <div class="card bg-white text-white">
-                        <img src="image/product/<%=product.getFilename()%>" class="card-img" alt="..." style="width:338;height:448;">
-                        <div class="card-img-overlay">
-                            <h5 class="card-title">상품 이미지 원본</h5>
-                            <p class="card-text">출처 : 구글 검색</p>
-                        </div>
-                    </div>
-            		<br>    
+                        <div class="card bg-white text-white">
+                            <img src="image/product/<%=product.getFilename()%>" class="card-img" alt="..." style="width:338;height:448;">
+                            <div class="card-img-overlay">
+                                <h5 class="card-title">상품 이미지 원본</h5>
+                                <p class="card-text">출처 : 구글 검색</p>
+                            </div>
+                        </div><br>
+                         
+                        <p>
+                            <a href="index.jsp" class="btn btn-secondary">상품목록 &raquo;</a>
+                        </p><hr>
                     </div>
                 </div>
             </div>
             
-            <p>
-                <a href="index.jsp" class="btn btn-secondary">상품목록 &raquo;</a>
-            </p><hr>
+           
         </div>
        <%@ include file="footer.jsp"%>
     </body>

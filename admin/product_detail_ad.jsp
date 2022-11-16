@@ -39,23 +39,23 @@
                         <p><b>분류 : </b><%=product.getCategory()%></p>
                         <p><b>재고 수 : </b><%=product.getUnitsInStock()%></p>
                         <h4><%=product.getUnitPrice()%>원</h4>
+           
+                        <div class="card bg-white text-white">
+                            <img src="image/product/<%=product.getFilename()%>" class="card-img" alt="..." style="width:338;height:448;">
+                            <div class="card-img-overlay">
+                                <h5 class="card-title">상품 이미지 원본</h5>
+                                <p class="card-text">출처 : 구글 검색</p>
+                            </div>
+                        </div><br>
+
+                        <p>
+                            <a href="#" class="btn btn-info">상품주문</a>
+                            <a href="index.jsp" class="btn btn-secondary">상품목록 &raquo;</a>
+                        </p>
                     </div>
                 </div>
             </div>
-
-            <div class="card bg-white text-white">
-                <img src="image/product/<%=product.getFilename()%>" class="card-img" alt="..." style="width:338;height:448;">
-                <div class="card-img-overlay">
-                    <h5 class="card-title">상품 이미지 원본</h5>
-                    <p class="card-text">출처 : 구글 검색</p>
-                </div>
-            </div>
-            <br>
-            <p>
-                <a href="#" class="btn btn-info">상품주문</a>
-                <a href="index.jsp" class="btn btn-secondary">상품목록 &raquo;</a>
-            </p><hr>
-        </div>
+        </div><hr> 
         <%@ include file="footer_ad.jsp"%>
     </body>
 </html>
