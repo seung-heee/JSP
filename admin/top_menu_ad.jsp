@@ -25,7 +25,8 @@
             <a style="color:black;" class="navbar-brand" href="index_ad.jsp">회원보기/추가/수정/삭제</a>
             <a style="color:black;" class="navbar-brand" href="index_ad.jsp">상품 보기</a>
             <a style="color:black;" class="navbar-brand" href="product_add_ad.jsp">등록</a>
-            <a style="color:black;" class="navbar-brand" href="index_ad.jsp">수정/삭제</a>
+            <a style="color:black;" class="navbar-brand" href="product_edit.jsp?edit=update">수정</a>
+            <a style="color:black;" class="navbar-brand" href="product_delete.jsp?edit=delete">삭제</a>
             <a style="color:black;" class="navbar-brand" href="../index.jsp">일반모드</a>
         </div>
     </div>

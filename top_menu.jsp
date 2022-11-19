@@ -22,10 +22,11 @@
     <!-- navbar 메뉴 -->
     <div class="container" style="display:inline-block; text-align:right;">
         <div class="navbar-header">
-            <a style="color:black;" class="navbar-brand" href="./index.jsp">메뉴바 : 홈페이지</a>
-            <a style="color:black;" class="navbar-brand" href="./index.jsp">로그인</a>
-            <a style="color:black;" class="navbar-brand" href="./index.jsp">고객센터</a>
+            <a style="color:black;" class="navbar-brand" href="index.jsp">상품목록(기본 홈)</a>
+            <a style="color:black;" class="navbar-brand" href="">로그인</a>
+            <a style="color:black;" class="navbar-brand" href="">고객센터</a>
             <a style="color:black;" class="navbar-brand" href="admin/index_ad.jsp">관리자모드</a>
+            <a style="color:black;" class="navbar-brand" href="admin/product_delete_process.jsp">테스트</a>
         </div>
     </div>
 </nav>
