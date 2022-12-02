@@ -1,6 +1,7 @@
 <%@ page contentType = "text/html;charset=utf-8" %>
 <%@ page import="java.sql.*" %>
 
+<!-- 상품삭제페이지 -->
 <html>
     <head>
         <link rel ="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
@@ -25,24 +26,28 @@
     </head>
     
     <body>
-        <jsp:include page="top_menu_ad.jsp" />
-        <div class="jumbotron">
-            <div class="container">
-                <h1 class="display-3">상품 편집</h1>
-            </div>
-        </div>
-
         <div class="container">
+            <jsp:include page="top_menu_ad.jsp" />
+            
+            <div class="jumbotron">
+                <div class="container">
+                    <h1 class="display-3">상품 편집</h1>
+                </div>
+            </div>
+
+        
             <div class="row" align="center">
                 <%@ include file="../db/db_conn.jsp"%>
+                
                 <%
                     String sql = "select * from product";
                     pstmt = conn.prepareStatement(sql);
                     rs = pstmt.executeQuery();
                     while (rs.next()) {
                 %>
-                <div class="col-md-4">
-                    <img src="../image/product/<%=rs.getString("p_fileName")%>" class="card-img" alt="...">
+                
+                <div class="col-md-4" style="margin-bottom:10px;">
+                    <img src="../image/product/<%=rs.getString("p_fileName")%>" class="card-img" alt="..." style="width:338;height:448;">
                     <h3><%=rs.getString("p_name")%></h3>
                     <p><%=rs.getString("p_description")%>
                     <p><%=rs.getString("p_UnitPrice")%>원

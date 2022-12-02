@@ -1,7 +1,9 @@
 <%@ page contentType = "text/html;charset=utf-8" %>
-<%@ page import = "java.util.ArrayList" %>
-<%@ page import = "dto.Product" %>
+<%@ page import = "java.util.ArrayList" %> <!-- 자바 리스트 자료구조 연동 -->
+<%@ page import = "dto.Product" %> <!-- 패키지 연동 -->
 <%@ page import="dao.ProductRepository"%>
+<%@ page import = "java.sql.*" %> <!-- 자바 sql 연동 -->
+<%@ page import="java.util.Enumeration" %>
 
 <%! String greeting = "교보문고에 오신 것을 환영합니다";
 String tagline = "하단 페이지 : 확인"; %>
@@ -16,40 +18,51 @@ String tagline = "하단 페이지 : 확인"; %>
     </div>
 
     <%
-        ProductRepository dao = ProductRepository.getInstance();
-		ArrayList<Product> listOfProducts = dao.getAllProducts();
+    	ProductRepository dao = ProductRepository.getInstance();
+        ArrayList<Product> listOfProducts = dao.getAllProducts();
+        String realFolder = "../image/product/";
     %>
 
     <div class="container">
         <div class="row" align="center">
+            
+            <%@ include file="../db/db_conn.jsp" %>
+            
             <%
-                for(int i=0; i<listOfProducts.size(); i++) {
-                    Product product = listOfProducts.get(i);
+                String sql = "select * from product"; //조회
+                pstmt = conn.prepareStatement(sql); //연결 생성
+                rs = pstmt.executeQuery(); //쿼리 실행
+                while (rs.next()) { //결과 ResultSet 객체 반복
             %>
             <div class="col-md-4" style="margin-bottom:10px;">
                 <div class="card bg-dark text-white">
-                    <img src="../image/product/<%=product.getFilename()%>" class="card-img" alt="..." style="width:338;height:448;">
+                    <!-- 수정해야할부분 이미지 경로-->
+                    <img src="<%= realFolder + rs.getString("p_fileName")%>" class="card-img" alt="흑..안나온다ㅠ" style="width:338;height:448;">
                     <div class="card-img-overlay">
+                        <%= rs.getString("p_fileName") %>
                         <h5 class="card-title">Best Seller</h5>
                         <p class="card-text">출처 : 교보문고</p>
                     </div>
                 </div>
-                <h4 style="margin-top:15px; margin-bottom:5px"><b><%=product.getPname()%></b></h4>
-                <p style="margin-bottom:5px;"><%=product.getDescription()%></p>
-                <p><%=product.getUnitPrice()%>원</p>
+                
+                <h4 style="margin-top:15px; margin-bottom:5px"><b><%= rs.getString("p_name") %></b></h4>
+                <p style="margin-bottom:5px;"><%= rs.getString("p_description") %></p>
+                <p><%= rs.getString("p_unitPrice") %></p>
                 <p>
-                    <a href="product_detail_ad.jsp?id=<%=product.getProductId()%>" class="btn btn-secondary" role="button">상품 상세 정보 &raquo;</a>
+                    <a href="product_detail_ad.jsp?id=<%= rs.getString("p_id") %>" class="btn btn-secondary" role="button">상품 상세 정보 &raquo;</a>
                 </p>
             </div>
+            
             <%
-            }
+                }
+            // 반복문 끝난 이후 db 연결 종료
+            if(rs != null) rs.close();
+            if(pstmt != null) pstmt.close();
+            if(conn != null) conn.close();
             %>
         </div>
         <hr>
     </div>
-
-
-
 
     <div class="card bg-dark text-white">
         <img src="image/top.jpg" class="card-img" alt="...">
@@ -73,6 +86,6 @@ String tagline = "하단 페이지 : 확인"; %>
         <h3>
             <%=tagline%>
         </h3>
-    </div><hr>
+    </div>
+    <hr>
 </div>
-

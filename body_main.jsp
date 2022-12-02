@@ -2,8 +2,8 @@
 <%@ page import = "java.util.ArrayList" %> <!-- 자바 리스트 자료구조 연동 -->
 <%@ page import = "dto.Product" %> <!-- 패키지 연동 -->
 <%@ page import="dao.ProductRepository"%>
-<!--<jsp:useBean id = "productDAO" class="dao.ProductRepository" scope="session" />-->
 <%@ page import = "java.sql.*" %> <!-- 자바 sql 연동 -->
+
 
 <%! String greeting = "교보문고에 오신 것을 환영합니다";
 String tagline = "하단 페이지 : 확인"; %>
@@ -16,11 +16,6 @@ String tagline = "하단 페이지 : 확인"; %>
             </h4>
         </div>
     </div>
-
-    <%
-    	ProductRepository dao = ProductRepository.getInstance();
-        ArrayList<Product> listOfProducts = dao.getAllProducts();
-    %>
 
     <div class="container">
         <div class="row" align="center">

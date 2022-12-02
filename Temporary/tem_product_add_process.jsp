@@ -21,6 +21,7 @@
 	String category = multi.getParameter("category");
 	String unitsInStock = multi.getParameter("unitsInStock");
 	String condition = multi.getParameter("condition");
+
 	Integer price;
 	if (unitPrice.isEmpty())
 		price = 0;
@@ -31,6 +32,7 @@
 		stock = 0;
 	else
 		stock = Long.valueOf(unitsInStock);
+
 	Enumeration files = multi.getFileNames();
 	String fname = (String) files.nextElement();
 	String fileName = multi.getFilesystemName(fname);

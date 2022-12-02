@@ -3,6 +3,7 @@
 <%@ page import="java.util.Date" %>
 <%@ page buffer="1kb" autoFlush="true"%>
 
+<!-- 상품등록페이지 -->
 <html>
     <head>
     	<link rel ="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
@@ -16,6 +17,7 @@
     
     <body>
         <jsp:include page="top_menu_ad.jsp" />
+        
 		<div class="jumbotron">
 			<div class="container">
 			<h1 class="display-3">상품 등록</h1>
@@ -95,7 +97,6 @@
                         <input type="button" class="btn btn-primary" value="등록" onclick="CheckAddProduct()" >
                     	<a href="../login/logout.jsp" class="btn btn-sm btn-success pull-right">로그아웃</a>
                     </div>
-
                 </div>
 			</form>
 		</div>	

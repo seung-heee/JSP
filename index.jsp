@@ -1,9 +1,14 @@
+
 <html>
     <head>
         <%@ page contentType = "text/html;charset=utf-8" %>
         <%@ page import="example.*" %>
         <%@ page import="java.util.Date" %>
         <%@ page buffer="1kb" autoFlush="true"%>
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap" rel="stylesheet">
         
     	<link rel ="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -17,6 +22,7 @@
     <body>
         <%@ include file ="top_banner.jsp" %>
         <div class="container"><%@ include file ="top_menu.jsp" %></div>
+        <%@ include file ="top_event.jsp" %>
         <%@ include file ="body_main.jsp" %>
         <%@ include file ="footer.jsp" %>
     </body>

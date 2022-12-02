@@ -17,19 +17,19 @@
     </head>
     <body>
          <!-- 현재 탑 메뉴 이미지 출력 에러 : 일단 패스 -->
-        <jsp:include page="../top_menu.jsp" />
-        <div class="jumbotron">
-            <div class="container">
-                <h1 class="display-3">장바구니</h1>
+         <div class="container">
+            <jsp:include page="../top_menu.jsp" />
+            <div class="jumbotron">
+                <div class="container">
+                    <h1 class="display-3">장바구니</h1>
+                </div>
             </div>
-        </div>
-        
-        <div class="container">
+
+
         <div class="row">
             <table width="100%">
                 <tr>
                     <td align="left"><a href="product_cart_remove_all.jsp?cartId=<%=cartId%>" class="btn btn-danger">삭제하기</a></td>
-                    <%=cartId%>
                     <td align="right"><a href="../order/order_info.jsp?cartId=<%=cartId%>" class="btn btn-success">주문하기</a></td>
                 </tr>
             </table>

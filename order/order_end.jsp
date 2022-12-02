@@ -35,14 +35,15 @@
         %>
         
         <!-- 주문완료 화면 출력 -->
-        <jsp:include page="../top_menu.jsp" />
-        <div class="jumbotron">
-           <div class="container">
-            <h1 class="display-3">주문 완료</h1>
-           </div>
-        </div>
-        
         <div class="container">
+            <jsp:include page="../top_menu.jsp" />
+            <div class="jumbotron">
+               <div class="container">
+                <h1 class="display-3">주문 완료</h1>
+               </div>
+            </div>
+        
+        
            <h2 class="alert alert-danger">주문해주셔서 감사합니다.</h2>
            <p>주문은 <% out.println(shipping_shippingDate); %>에 배송될 예정입니다! !	
            <p> 주문번호 : <% out.println(shipping_cartId); %>		

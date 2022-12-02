@@ -61,7 +61,7 @@ public class ProductRepository {
         book6.setUnitsInStock(1000);
         book6.setCondition("New");
         book6.setFilename("P1239.jpg");
-        
+       
         Product book7 = new Product("P1241", "수상한 초콜릿 가게", 13500);
         book7.setDescription("소중한 짝사랑을 들어드려요!");
         book7.setCategory("장편소설");

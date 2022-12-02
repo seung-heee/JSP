@@ -2,6 +2,7 @@
 <%@ page import="java.sql.*"%>
 <%@ include file="../db/db_conn.jsp" %>
 
+<!-- 상품삭제 처리페이지 -->
 <%
     String productId = request.getParameter("id");
     //out.println("받아온 아이디 값 productId : " + productId + "<br>");
@@ -20,8 +21,7 @@
             pstmt = conn.prepareStatement(sql1);
             pstmt.setString(1, productId);
             
-            pstmt.executeUpdate(); 
-            
+            pstmt.executeUpdate();
         }
     }
     response.sendRedirect("product_delete.jsp?edit=delete");

@@ -5,6 +5,7 @@
     <head>
         <title>mysql 데이터베이스 접속 테스트</title>
     </head>
+    
     <body>
         <%
             Statement stm = null;
@@ -19,7 +20,7 @@
                     conn_state = true;
                     if(stm.execute("select * from product")) {
                             rs = stm.getResultSet();
-                    } 
+                    }
                  while(rs.next()) {
                     out.println(rs.getString("p_id"));
                     out.println(rs.getString("p_name"));
@@ -31,7 +32,7 @@
                 rs.close();
                 stm.close();
         }
-        catch(Exception e) {
+        catch (Exception e) {
                 out.println("rs.next() ERROR");
         }
         conn.close();

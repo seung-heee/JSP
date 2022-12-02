@@ -13,14 +13,15 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
         <title>배송 정보</title>
     </head>
-    <body>
+    <body>        
+        <div class="container">
         <jsp:include page="../top_menu.jsp" />
         <div class="jumbotron">
             <div class="container">
                 <h1 class="display-3">배송정보</h1>
             </div>
         </div>
-        <div class="container">
+
             <!-- 배송정보 입력 form -->
             <form action="order_info_process.jsp" class="form-horizontal" method="post">
                 <input type="hidden" name="cartId" value="<%=request.getParameter("cartId")%>" />
