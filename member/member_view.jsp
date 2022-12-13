@@ -54,11 +54,11 @@
                     <%
                          if(edit.equals("m_update")) {
                     %>
-                         <a href="member_update.jsp?id=<%=rs.getString("id")%>" class="btn btn-success" role="button" style="display:block;">수정 &raquo;></a>
+                         <a href="member_update.jsp?id=<%=rs.getString("id")%>" class="btn btn-success" role="button">수정 &raquo;></a>
                     <%
                          } else if (edit.equals("m_delete")) {
                     %>
-                         <a href="#" onclick="deleteConfirm('<%=rs.getString("id")%>')" class="btn btn-danger" role="button" style="display:block;">삭제 &raquo;></a>
+                         <a href="#" onclick="deleteConfirm('<%=rs.getString("id")%>')" class="btn btn-danger" role="button">삭제 &raquo;></a>
                     <%
                          }
                     %>

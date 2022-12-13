@@ -18,9 +18,7 @@
 	String mail = request.getParameter("mail");
 	String phone = request.getParameter("phone");
 	String address = request.getParameter("address");
-    // 등록한 당일의 날짜를 구함. 등록일
     LocalDate _regist_day = LocalDate.now();
-    // 등록일의 데이터 타입을 문자열로 변경함.
     String  regist_day = String.valueOf(_regist_day);
 
     //DB 연동

@@ -18,15 +18,11 @@
 	String mail = request.getParameter("mail");
 	String phone = request.getParameter("phone");
 	String address = request.getParameter("address");
-    // 등록한 당일의 날짜를 구함. 등록일
     LocalDate _regist_day = LocalDate.now();
-    // 등록일의 데이터 타입을 문자열로 변경함.
     String  regist_day = String.valueOf(_regist_day);
 
     out.println(id + password + name + gender);
 
-//     DB 연동
-//     수정이 id값이 바뀌지 않으면 됨. 근데 id값이 바뀌면 안된다. 왜?
     String sql = "UPDATE member SET id=?, name=?, password=?, birth=?, gender=?, mail=?, phone=?, address=?, regist_day=? WHERE id=?";
     pstmt = conn.prepareStatement(sql); // 쿼리문 몸체만 넣기
 
