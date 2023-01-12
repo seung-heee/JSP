@@ -1,5 +1,5 @@
-# 20200977_SERVLET
-## SERVLET_JSP
+# 20200977_SERVLET_JSP
+## 교보문고 사이트 클론코딩
 ### 2주차 22/09/07
 -프로젝트 환경 설정, HELLO WORLD 확인 완료,
 -쇼핑몰 메인 페이지 [index.jsp 실행/수정 완료]
