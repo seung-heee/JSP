@@ -7,7 +7,7 @@
 ### 3주차 22/09/14
 -쇼핑몰 메인 페이지 모듈화 4개
 [top_banner.jsp/top_menu.jsp/body_main.jsp/footer.jsp]
-![image](https://user-images.githubusercontent.com/112852049/211989245-d2ffd306-40ab-40cb-a707-9e96aa35ab79.png)
+![image](https://user-images.githubusercontent.com/112852049/211989357-b74e69d5-a4d5-485f-968a-e6cc8f25468d.png)
 
 
 ### 4주차 22/09/21
